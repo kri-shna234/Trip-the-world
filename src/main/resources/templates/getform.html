@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Ticket</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+            width: 300px;
+            text-align: center;
+			color: blueviolet;
+        }
+        .form-container:hover {
+            transform: scale(1.05);
+        }
+        input[type="number"], input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        input[type="number"] {
+            border: 2px solid #00f2fe;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #00f2fe;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4facfe;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Get Ticket Information</h1>
+        <form action="/getTicket" method="get">
+            <label for="ticketNumber">Ticket Number:</label>
+            <input type="number" id="ticketNumber" name="ticketNumber" required>
+            <input type="submit" value="Get Ticket">
+        </form>
+        <div th:if="${error}" class="error" th:text="${error}"></div>
+    </div>
+</body>
+</html>

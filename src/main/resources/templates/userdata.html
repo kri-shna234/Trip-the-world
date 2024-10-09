@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h3 {
+            margin: 0;
+            color: #4CAF50;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Passenger Details</h1>
+        <form action="/bookTicket" method="post">
+            <table>
+                <tr>
+                    <td><h3>Name</h3></td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><h3>Source</h3></td>
+                    <td><input type="text" name="source" required></td>
+                </tr>
+                <tr>
+                    <td><h3>Destination</h3></td>
+                    <td><input type="text" name="destination" required></td>
+                </tr>
+                <tr>
+                    <td><h3>Flight Name</h3></td>
+                    <td><input type="text" name="flight_name" required></td>
+                </tr>
+                <tr>
+                    <td><h3>Date</h3></td>
+                    <td><input type="date" name="flght_date" required></td>
+                </tr>
+            </table>
+            <div class="button-container">
+                <input type="submit" value="OK">
+                <input type="reset" value="clear">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

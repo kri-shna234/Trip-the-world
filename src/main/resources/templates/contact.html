@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .contact-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            width: 400px;
+            text-align: center;
+        }
+        .contact-container:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ff7e5f;
+        }
+        .contact-info {
+            margin: 10px 0;
+            font-size: 18px;
+            line-height: 1.5;
+			color: blue;
+        }
+        .contact-info span {
+            font-weight: bold;
+            color: #ff7e5f;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #ff7e5f;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #feb47b;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p><span>Email:</span> contact@tripworld.com</p>
+            <p><span>Phone:</span> +1 (123) 456-7890</p>
+            <p><span>Address:</span> 123 Travel St, Wanderlust City, USA</p>
+        </div>
+        <div class="social-links">
+            <a href="#" title="Facebook">Facebook</a>
+            <a href="#" title="Twitter">Twitter</a>
+            <a href="#" title="Instagram">Instagram</a>
+        </div>
+    </div>
+</body>
+</html>

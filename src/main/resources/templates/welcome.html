@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>TripWorld</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.5s;
+        }
+
+        .main {
+            border: 5px solid #ff5722;
+            background-color: #3f51b5;
+            font-size: 36px;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .choice {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .choice:hover {
+            transform: scale(1.05);
+        }
+
+        .choice a {
+            text-decoration: none;
+            color: #3f51b5;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 2px solid #3f51b5;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .choice a:hover {
+            background-color: #3f51b5;
+            color: white;
+        }
+
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        img {
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Trip The World</h1>
+    </div>
+
+    <div class="choice">
+        <div>
+            <a href="/book">Book Ticket</a>
+        </div>
+        <div>
+            <a href="/get">View Ticket</a>
+        </div>
+        <div>
+            <a href="/details">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="images">
+        <img src="https://images.unsplash.com/photo-1473862170180-84427c485aca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFpcnBsYW5lfGVufDB8fDB8fHww" alt="Travel Image 1">
+        <img src="https://images.unsplash.com/photo-1523833082115-1e8e294bd14e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGFpcnBsYW5lfGVufDB8fDB8fHww" alt="Travel Image 2">
+        <img src="https://media.istockphoto.com/id/2039815023/photo/photo-of-young-girl-wearing-t-shirt-isolated-yellow-background-stock-photo.webp?a=1&b=1&s=612x612&w=0&k=20&c=DR9X0tKUVq2c8jQ3sx3WnqsOTZwk5QkshGZjvHrLOgA=" alt="Travel Image 3">
+    </div>
+</body>
+
+</html>
